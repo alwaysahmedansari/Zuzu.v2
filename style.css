@@ -5,7 +5,8 @@
    - Colours: the :root[data-theme="light"] / ["dark"] / ["sepia"] blocks
    - Mascot:  the --mascot variable (hero + card covers)
    ===================================================================== */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Bricolage+Grotesque:wght@600;700;800&family=Fraunces:wght@500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Bricolage+Grotesque:wght@600;700;800&family=Fraunces:wght@500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+@font-face{font-family:'Jameel Noori Nastaleeq';src:url('jameel-noori.woff') format('woff');font-weight:400;font-style:normal;font-display:swap;unicode-range:U+0020-007E,U+00A0,U+0600-06FF,U+0750-077F,U+FB50-FDFF,U+FE70-FEFF,U+200C-200F,U+2013-2014,U+2018-201D,U+2026}
 
 :root {
   --primary: #7652ef;
@@ -27,7 +28,7 @@
   --radius-lg: 20px;
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-serif: 'Lora', Georgia, serif;
-  --font-urdu: 'Noto Nastaliq Urdu', serif;
+  --font-urdu: 'Jameel Noori Nastaleeq', serif;
 }
 
 [data-theme="sepia"] {
@@ -701,3 +702,6 @@ h1,.hero h1{font-weight:600;letter-spacing:-1px}
 .mini-row,.page-main article{border:1px solid var(--edge);box-shadow:none}
 .page-header,.page-footer,.site-footer{border-color:var(--edge)}
 .page-main button{border:1px solid var(--edge)}
+
+/* Urdu: Jameel Noori has one weight only, so never fake bold on it */
+.urdu-text,.urdu-text *{font-synthesis:none}
